@@ -1,4 +1,6 @@
-<h1>Message Details</h1>
+<h3>Message Details</h3>
 
-<h1 class="fs-5"><%= @message.title %></h1>
-<p><%= @message.description %></p>
+<h5 class="fs-6"><%= @message.title %></h5>
+<h5><%= @message.description %></h5>
+
+<%= link_to "Edit", edit_message_path(@message) ,class: "btn btn-primary" %> <%= link_to "Back", root_path, class: "btn btn-primary" %>

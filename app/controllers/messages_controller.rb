@@ -6,9 +6,27 @@ class MessagesController < ApplicationController
     end 
 
     def new
-        @messages = Message.new
+        @message = Message.new
     end
     def show
+       
+    end
+
+
+    def edit
+    
+    end
+
+    def update
+
+        if @message.update(message_params)
+            redirect_to edit_message_path(@message)
+        else
+            render "edit"
+        end    
+    end
+
+    def destroy
        
     end
 

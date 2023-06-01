@@ -1,20 +1,7 @@
- 
-<div class="container ms-auto mt-3">
-  <%= form_with model: @messages do |form| %>
-    <div class=" col-sm-3 mb-3 mt-3">
-      <%= form.label :query, "Title:" %>
-      <%= form.text_field :title ,:class => "form-control form-control-lg" %>
-    </div>
-    <div class="col-sm-3 mb-3">
-      <%= form.label :query, "Description:",:class => "px-3" %>
-      <%= form.text_area :body,:class => "form-control form-control-sm", size: "10x1" %>
-      
-    </div>
 
-    <%= form.button "Update" , :class=>"text-primary py-2"%>
-    
-  <% end %>
-
+ <div class="container ms-auto mt-3">
+    <h2>Add Message</h2>
+    <%= render "form"  %>
 </div>
 
 
