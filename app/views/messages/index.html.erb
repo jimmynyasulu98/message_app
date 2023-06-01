@@ -1,0 +1,6 @@
+<h1>Hellow</h1>
+
+<% @messages.each do |message| %>
+    <h1> <%= message.title %> </h1>
+<% end %>
+<button class="btn btn-success"><%= link_to "New message" , new_message_path %></button>
