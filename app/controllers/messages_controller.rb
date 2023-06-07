@@ -9,9 +9,8 @@ class MessagesController < ApplicationController
         @message = Message.new
     end
     def show
-       
+       print("okay 2")
     end
-
 
     def edit
     
@@ -27,11 +26,14 @@ class MessagesController < ApplicationController
     end
 
     def destroy
-       
+        @message.destroy
+        flash[:success] = "The to-do item was successfully destroyed."    
+        redirect_to root_path
     end
 
-    def create
+    def create     
         @message = Message.new(message_params)
+        puts @message
         if @message.save
             redirect_to root_path
         else
@@ -41,8 +43,10 @@ class MessagesController < ApplicationController
     private
         def message_params
             params.require(:message).permit(:title, :description) 
+
         end   
         def find_message
             @message = Message.find(params[:id])
         end
+        
 end

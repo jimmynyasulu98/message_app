@@ -6,6 +6,8 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.3"
 gem "sprockets-rails"
 gem 'simple_form', '~> 5.2'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'devise', '~> 4.9', '>= 4.9.2'
+gem 'bcrypt', '~> 3.1.7'
 # Use mysql as the database for Active Record
 gem "mysql2", "~> 0.5"
 
