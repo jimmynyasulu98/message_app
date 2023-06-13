@@ -6,18 +6,15 @@ class MessagesController < ApplicationController
     end 
 
     def new
-        @message = Message.new
+        @message = Current.user.messages.build
     end
     def show
-       print("okay 2")
     end
 
     def edit
     
     end
-
     def update
-
         if @message.update(message_params)
             redirect_to edit_message_path(@message)
         else
@@ -32,8 +29,7 @@ class MessagesController < ApplicationController
     end
 
     def create     
-        @message = Message.new(message_params)
-        puts @message
+        @message = Current.user.messages.build(message_params)
         if @message.save
             redirect_to root_path
         else
@@ -43,7 +39,6 @@ class MessagesController < ApplicationController
     private
         def message_params
             params.require(:message).permit(:title, :description) 
-
         end   
         def find_message
             @message = Message.find(params[:id])

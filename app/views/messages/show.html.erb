@@ -2,6 +2,8 @@
 
 <h5 class="fs-6"><%= @message.title %></h5>
 <h5><%= @message.description %></h5>
+<%= render @message.comments %>
+<%= render "comments/form" %>
 
 <%= link_to "Edit", edit_message_path(@message) ,class: "btn btn-primary" %> 
 <%= link_to "Back", root_path, class: "btn btn-primary" %>

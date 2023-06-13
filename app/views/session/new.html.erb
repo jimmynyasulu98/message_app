@@ -1,7 +1,6 @@
  <h1>Sign In</h1>
   <%= form_with url: sign_in_path do |f| %>
-    <%= f.label 'Name:'%><br>
-    <%= f.text_field :name, id: 'name' %>
+   
     <p>
     <%= f.label 'email:'%><br>
     <%= f.text_field :email, id: 'email' %>
@@ -9,6 +8,7 @@
     <p>
     <%= f.label 'password:'%><br>
     <%= f.password_field :password, id: 'password' %>
+     <%= link_to 'Forgot your password?', password_reset_path %>
     </p>
     <p>
     <%= f.submit 'Log In' %>
